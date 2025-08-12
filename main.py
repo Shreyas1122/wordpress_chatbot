@@ -234,3 +234,8 @@ async def ask_question(request: QuestionRequest):
 
     return {"answer": response["output"]}
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to my chatbot API!"}
+
+
