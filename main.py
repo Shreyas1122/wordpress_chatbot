@@ -238,4 +238,9 @@ async def ask_question(request: QuestionRequest):
 async def root():
     return {"message": "Welcome to my chatbot API!"}
 
+@app.head("/")
+async def root_head():
+    return Response(status_code=200)
+
+
 
